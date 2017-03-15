@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>One Step</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <div class="container">
+       <div class="row">
+           <div class="col-md-8 col-md-offset-2">
+               <img src="img/js.jpeg" alt="Javascript">
+           </div>    
+           <div class="col-md-4 col-md-offset-4 result">
+                <h4>Check your Result</h4>
+                <input type="text" name="number" id="resultShow">
+                <button class="btn-success" type="button" onclick="Click();">Show</button>
+                <h1 id="GrAde"></h1>
+           </div>
+       </div>
+   </div>
+    
+    <script>
+        function Click(){
+        var r = document.getElementById('resultShow').value;
+        
+       
+            if (r<=100){
+                document.getElementById("GrAde").innerHTML="A+"
+                if (r<=79){
+                    document.getElementById("GrAde").innerHTML="A"
+                    if (r<=69){
+                        document.getElementById("GrAde").innerHTML="A-"
+                        if (r<=59){
+                            document.getElementById("GrAde").innerHTML="B"
+                            if(r<=49){
+                                document.getElementById("GrAde").innerHTML="C"
+                                if(r<=39){
+                                    document.getElementById("GrAde").innerHTML="F"
+                                }
+                            }
+                        }
+                    }
+                }
+            }else{
+                document.getElementById("GrAde").innerHTML="Wrong Input! Try Again."
+            }
+        }
+    </script>
+</body>
+</html>
