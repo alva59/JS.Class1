@@ -21,6 +21,17 @@
        </div>
    </div>
     
+    
+    <div class="container">
+       <div class="row">
+           <div class="col-md-4 col-md-offset-4 result">
+               <h4>Check Even or Odd</h4>
+               <input type="text" name="number" id="EvenOdd">
+               <button class="btn-success" type="button" onclick="ClickAgain();">Show</button>
+               <h1 id="FindNmbrs"></h1>
+           </div>
+       </div>
+   </div>
     <script>
         function Click(){
         var r = document.getElementById('resultShow').value;
@@ -45,6 +56,15 @@
                 }
             }else{
                 document.getElementById("GrAde").innerHTML="Wrong Input! Try Again."
+            }
+        }
+        
+        function ClickAgain(){
+        var r = document.getElementById('EvenOdd').value;
+            if(r%2==0){
+                document.getElementById("FindNmbrs").innerHTML="Even Number"
+            }else{
+                document.getElementById("FindNmbrs").innerHTML="Odd Number"
             }
         }
     </script>
